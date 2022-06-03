@@ -1,17 +1,40 @@
 {
   "name": "fieldservices-dashboard",
-  "version": "0.1.0",
+  "version": "0.1.0-220603",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db": "prisma studio",
+    "migrate": "prisma migrate dev"
   },
   "dependencies": {
-    "next": "12.1.6",
+    "@chakra-ui/icons": "^1.1.7",
+    "@chakra-ui/react": "^1.8.8",
+    "@chakra-ui/select": "^2.0.0",
+    "@emotion/react": "11",
+    "@emotion/styled": "11",
+    "@hookform/resolvers": "^2.8.8",
+    "@prisma/client": "^3.14.0",
+    "animate.css": "^4.1.1",
+    "bcryptjs": "^2.4.3",
+    "framer-motion": "^6.3.3",
+    "little-state-machine": "^4.3.2",
+    "next": "^12.1.6",
+    "next-auth": "^4.3.4",
+    "prisma": "^3.14.0",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "react-hook-form": "^7.30.0",
+    "react-icons": "^4.3.1",
+    "react-no-ssr": "^1.1.0",
+    "react-router-dom": "^6.3.0",
+    "react-toastify": "^9.0.1",
+    "sqlite3": "^5.0.8",
+    "underscore": "^1.13.3",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "eslint": "8.15.0",

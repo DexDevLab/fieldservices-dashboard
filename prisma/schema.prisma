@@ -1,0 +1,81 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Users {
+  id       Int    @id @default(autoincrement())
+  username String @unique
+  password String
+  level    Int
+}
+
+model Equipamentos {
+  id     Int    @id @default(autoincrement())
+  tipo   String
+  modelo String @unique
+}
+
+model TipoEquip {
+  id   Int    @id @default(autoincrement())
+  tipo String @unique
+}
+
+model Perifericos {
+  id      Int    @id @default(autoincrement())
+  nome    String @unique
+  estoque Int
+}
+
+model Tecnicos {
+  id    Int    @id @default(autoincrement())
+  nome  String
+  email String @unique
+}
+
+model Localidades {
+  id        Int    @id @default(autoincrement())
+  nome      String @unique
+  iata      String @unique
+  iata_nome String @unique
+}
+
+model Emails {
+  id    Int    @id @default(autoincrement())
+  email String @unique
+}
+
+model TermoResp {
+  id                         Int      @id @default(autoincrement())
+  ticket                     Int
+  datahora                   DateTime
+  motivo                     String
+  usuario_nome               String
+  usuario_email              String
+  usuario_bp                 Int
+  usuario_departamento       String
+  usuario_localidade         String
+  tecnico_nome               String
+  tecnico_email              String
+  equip_new_tipo             String
+  equip_new_modelo           String
+  equip_new_serial           String
+  equip_new_patrimonio       String
+  equip_new_entregue_perif   Boolean
+  equip_new_perifericos      String?
+  equip_old_recolhido        Boolean
+  equip_old_recolhido_motivo String?
+  equip_old_tipo             String?
+  equip_old_modelo           String?
+  equip_old_serial           String?
+  equip_old_patrimonio       String?
+  equip_old_recolhido_perif  Boolean
+  equip_old_perifericos      String?
+}

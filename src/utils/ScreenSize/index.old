@@ -1,0 +1,25 @@
+// import React, { useState, useEffect } from 'react'
+
+// export default function ScreenSize() {
+//   const [windowDimension, detectHW] = useState({
+//     winWidth: window.outerWidth,
+//     winHeight: window.outerHeight,
+//   })
+
+//   const detectSize = () => {
+//     detectHW({
+//       winWidth: window.outerWidth,
+//       winHeight: window.outerHeight,
+//     })
+//   }
+
+//   useEffect(() => {
+//     window.addEventListener('resize', detectSize)
+
+//     return () => {
+//       window.removeEventListener('resize', detectSize)
+//     }
+//   }, [windowDimension])
+
+//   return (windowDimension)
+// }
